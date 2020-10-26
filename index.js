@@ -6,7 +6,6 @@ fs = require('fs');
 let functions = require('./functions');
 const constants = require('./constants');
 
-
 const app = express();
 
 //bodyParser middleware
@@ -26,25 +25,25 @@ const { WebhookClient } = require("dialogflow-fulfillment");
 
 app.post("/dialogflow", express.json(), (req, res) => {
     const agent = new WebhookClient({ request: req, response: res });
-
+    console.log('toto');
     // console.log('Dialogflow Request headers: ' + JSON.stringify(req.headers));
     // console.log('Dialogflow Request body: ' + JSON.stringify(req.body));
 
     // fs.writeFile('./generate/responce/headers.json', JSON.stringify(req.headers));
     // fs.writeFile('./generate/responce/body.json', JSON.stringify(req.body));
-
-    let intentMap = new Map();
-    intentMap.set("Welcome", functions.welcome);
-    intentMap.set("Fallback", fallback);
-    intentMap.set("Goodbye", functions.goodbye);
-    intentMap.set("Outside Diameter", functions.getOutsideDiameter);
-    intentMap.set("Nominal Pipe Size", functions.getNominalPipeSize);
-    intentMap.set("Nominal Diameter", functions.getNominalDiameter);
-    intentMap.set("Wall Thickness", functions.getWallThickness);
-    intentMap.set("Schedule", functions.getSchedule);
-    intentMap.set("Weight", functions.getWeight);
-    intentMap.set("Exchange Rate", functions.exchangeRate);
-    agent.handleRequest(intentMap);
+    console.log('toto');
+    // let intentMap = new Map();
+    // intentMap.set("Welcome", functions.welcome);
+    // intentMap.set("Fallback", fallback);
+    // intentMap.set("Goodbye", functions.goodbye);
+    // intentMap.set("Outside Diameter", functions.getOutsideDiameter);
+    // intentMap.set("Nominal Pipe Size", functions.getNominalPipeSize);
+    // intentMap.set("Nominal Diameter", functions.getNominalDiameter);
+    // intentMap.set("Wall Thickness", functions.getWallThickness);
+    // intentMap.set("Schedule", functions.getSchedule);
+    // intentMap.set("Weight", functions.getWeight);
+    // intentMap.set("Exchange Rate", functions.exchangeRate);
+    // agent.handleRequest(intentMap);
 });
 
 function fallback(agent) {
