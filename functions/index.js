@@ -17,7 +17,7 @@ module.exports = {
     // getSchedule,
     // getWeight,
     // welcome,
-    goodbye,
+    // goodbye,
     // fallback,
     exchangeRate
 };
