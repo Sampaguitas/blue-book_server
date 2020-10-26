@@ -31,7 +31,8 @@ app.post("/dialogflow", express.json(), (req, res) => {
 
     // fs.writeFile('./generate/responce/headers.json', JSON.stringify(req.headers));
     // fs.writeFile('./generate/responce/body.json', JSON.stringify(req.body));
-    console.log('toto');
+
+    
     // let intentMap = new Map();
     // intentMap.set("Welcome", functions.welcome);
     // intentMap.set("Fallback", fallback);
