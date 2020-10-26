@@ -25,15 +25,15 @@ const { WebhookClient } = require("dialogflow-fulfillment");
 
 app.post("/dialogflow", express.json(), (req, res) => {
     const agent = new WebhookClient({ request: req, response: res });
-    console.log('toto');
-    // console.log('Dialogflow Request headers: ' + JSON.stringify(req.headers));
-    // console.log('Dialogflow Request body: ' + JSON.stringify(req.body));
+
+    console.log('Dialogflow Request headers: ' + JSON.stringify(req.headers));
+    console.log('Dialogflow Request body: ' + JSON.stringify(req.body));
 
     // fs.writeFile('./generate/responce/headers.json', JSON.stringify(req.headers));
     // fs.writeFile('./generate/responce/body.json', JSON.stringify(req.body));
 
+
     
-    // let intentMap = new Map();
     // intentMap.set("Welcome", functions.welcome);
     // intentMap.set("Fallback", fallback);
     // intentMap.set("Goodbye", functions.goodbye);
@@ -45,14 +45,18 @@ app.post("/dialogflow", express.json(), (req, res) => {
     // intentMap.set("Weight", functions.getWeight);
     // intentMap.set("Exchange Rate", functions.exchangeRate);
     // agent.handleRequest(intentMap);
+
+    let intentMap = new Map();
+    intentMap.set('dimensions_elbow - BW - 45', require('./functions/dimensionsElbowBw45'));
+    agent.handleRequest(intentMap);
 });
 
-function fallback(agent) {
-    let dontKnow = constants.dontKnowArray[Math.floor(Math.random() * constants.dontKnowArray.length)];
-    let whatNext = constants.whatNextArray[Math.floor(Math.random() * constants.whatNextArray.length)];
-    agent.add(`${dontKnow}`);
-    agent.add(`${whatNext}`);
-}
+// function fallback(agent) {
+//     let dontKnow = constants.dontKnowArray[Math.floor(Math.random() * constants.dontKnowArray.length)];
+//     let whatNext = constants.whatNextArray[Math.floor(Math.random() * constants.whatNextArray.length)];
+//     agent.add(`${dontKnow}`);
+//     agent.add(`${whatNext}`);
+// }
 
 // Listen on port
 const port = process.env.PORT || 5000;
