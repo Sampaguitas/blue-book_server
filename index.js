@@ -1,63 +1,44 @@
+const { WebhookClient } = require("dialogflow-fulfillment");
 const express = require("express");
 const mongoose = require('mongoose');
-mongoose.set('useFindAndModify', false);
+// const _ = require('lodash');
 const bodyParser = require('body-parser');
-fs = require('fs');
-let functions = require('./functions');
-const constants = require('./constants');
-
 const app = express();
+const cors = require('cors');
+// fs = require('fs');
 
-//bodyParser middleware
-app.use(bodyParser.urlencoded({extended:false}));
-app.use(bodyParser.json());
+app
+.use(cors())
+.use(bodyParser.urlencoded({extended:false}))
+.use(bodyParser.json());
 
-//DB config
-const db = require('./config/keys').mongoURI;
-
-//Connect to MongoDB
 mongoose
-.connect(db,{useNewUrlParser:true, useUnifiedTopology: true})
+.set('useFindAndModify', false)
+.connect(require('./config/keys').mongoURI,{useNewUrlParser:true, useUnifiedTopology: true})
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.log(err));
 
-const { WebhookClient } = require("dialogflow-fulfillment");
-
 app.post("/dialogflow", express.json(), (req, res) => {
     const agent = new WebhookClient({ request: req, response: res });
-
-    console.log('Dialogflow Request headers: ' + JSON.stringify(req.headers));
-    console.log('Dialogflow Request body: ' + JSON.stringify(req.body));
-
-    // fs.writeFile('./generate/responce/headers.json', JSON.stringify(req.headers));
-    // fs.writeFile('./generate/responce/body.json', JSON.stringify(req.body));
-
-
-    
-    // intentMap.set("Welcome", functions.welcome);
-    // intentMap.set("Fallback", fallback);
-    // intentMap.set("Goodbye", functions.goodbye);
-    // intentMap.set("Outside Diameter", functions.getOutsideDiameter);
-    // intentMap.set("Nominal Pipe Size", functions.getNominalPipeSize);
-    // intentMap.set("Nominal Diameter", functions.getNominalDiameter);
-    // intentMap.set("Wall Thickness", functions.getWallThickness);
-    // intentMap.set("Schedule", functions.getSchedule);
-    // intentMap.set("Weight", functions.getWeight);
-    // intentMap.set("Exchange Rate", functions.exchangeRate);
-    // agent.handleRequest(intentMap);
-
     let intentMap = new Map();
-    intentMap.set('dimensions_elbow - BW - 45', require('./functions/dimensionsElbowBw45'));
+    
+    intentMap.set('dimensions_elbow - BW - 45 - Sch', require('./routes/dimensionsElbowBw45Sch'));
+    intentMap.set('dimensions_elbow - BW - 90 - SR - Sch', require('./routes/dimensionsElbowBw90SrSch'));
+    intentMap.set('dimensions_elbow - BW - 90 - LR - Sch', require('./routes/dimensionsElbowBw90LrSch'));
+    intentMap.set('dimensions_elbow - F - 45 - SW - 3000', require('./routes/dimensionsElbow45Sw3000'));
+    intentMap.set('dimensions_elbow - F - 45 - SW - 6000', require('./routes/dimensionsElbow45Sw6000'));
+    intentMap.set('dimensions_elbow - F - 45 - SW - 9000', require('./routes/dimensionsElbow45Sw9000'));
+    intentMap.set('dimensions_elbow - F - 90 - SW - 3000', require('./routes/dimensionsElbow90Sw3000'));
+    intentMap.set('dimensions_elbow - F - 90 - SW - 6000', require('./routes/dimensionsElbow90Sw6000'));
+    intentMap.set('dimensions_elbow - F - 90 - SW - 9000', require('./routes/dimensionsElbow90Sw9000'));
+    intentMap.set('dimensions_elbow - F - 45 - NPT - 2000', require('./routes/dimensionsElbow45Npt2000'));
+    intentMap.set('dimensions_elbow - F - 45 - NPT - 3000', require('./routes/dimensionsElbow45Npt3000'));
+    intentMap.set('dimensions_elbow - F - 45 - NPT - 6000', require('./routes/dimensionsElbow45Npt6000'));
+    intentMap.set('dimensions_elbow - F - 90 - NPT - 2000', require('./routes/dimensionsElbow90Npt2000'));
+    intentMap.set('dimensions_elbow - F - 90 - NPT - 3000', require('./routes/dimensionsElbow90Npt3000'));
+    intentMap.set('dimensions_elbow - F - 90 - NPT - 6000', require('./routes/dimensionsElbow90Npt6000'));
+    
     agent.handleRequest(intentMap);
 });
 
-// function fallback(agent) {
-//     let dontKnow = constants.dontKnowArray[Math.floor(Math.random() * constants.dontKnowArray.length)];
-//     let whatNext = constants.whatNextArray[Math.floor(Math.random() * constants.whatNextArray.length)];
-//     agent.add(`${dontKnow}`);
-//     agent.add(`${whatNext}`);
-// }
-
-// Listen on port
-const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`Server running on ${port}`));
+app.listen(process.env.PORT || 5000, () => console.log(`Server running on ${process.env.PORT || 5000}`));
