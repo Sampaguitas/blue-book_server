@@ -13,6 +13,7 @@ async function dimensionsElbow45Sw3000(agent) {
     } else {
         
         let sizeOne = getParam(context.parameters.sizeOne);
+        let unit = getParam(context.parameters.unit) || 'metric';
 
         if (!sizeOne) {
             return dontKnowResponce(agent);
@@ -21,7 +22,7 @@ async function dimensionsElbow45Sw3000(agent) {
                 if (!!err || !res) {
                     return dontKnowResponce(agent);
                 } else {
-                    return dimensionsResponce(agent, res.dimensions, `${sizeOne} ${translate('elb45sw', locale)} class 3000`, 'elb45sw.png')
+                    return dimensionsResponce(agent, unit, res.dimensions, `${sizeOne} ${translate('elb45sw', locale)} class 3000`, 'elb45sw.png')
                 }
             });
         }

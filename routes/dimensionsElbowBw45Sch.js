@@ -14,6 +14,7 @@ async function dimensionsElbowBw45Sch(agent) {
         
         let sizeOne = getParam(context.parameters.sizeOne);
         let scheduleOne = getParam(context.parameters.scheduleOne);
+        let unit = getParam(context.parameters.unit) || 'metric';
 
         if (!sizeOne || !scheduleOne) {
             return dontKnowResponce(agent);
@@ -22,7 +23,7 @@ async function dimensionsElbowBw45Sch(agent) {
                 if (!!err || !res) {
                     return dontKnowResponce(agent);
                 } else {
-                    return dimensionsResponce(agent, res.dimensions, `${sizeOne} ${scheduleOne} ${translate('elb45lr', locale)}`, 'elb45lr.png')
+                    return dimensionsResponce(agent, unit, res.dimensions, `${sizeOne} ${scheduleOne} ${translate('elb45lr', locale)}`, 'elb45lr.png')
                 }
             });
         }

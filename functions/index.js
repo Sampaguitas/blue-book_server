@@ -2,9 +2,8 @@ const _ = require('lodash');
 const {Card } = require('dialogflow-fulfillment');
 let { name } = require('../constants');
 
-function dimensionsResponce(agent, dimensions, title, image) {
+function dimensionsResponce(agent, system, dimensions, title, image) {
     let locale = getLocale(agent.locale);
-    let system = 'metric';
     if (isScreenCapable(agent)) {
         let params = Object.keys(dimensions).reduce(function(acc, cur) {
             if (dimensions[cur].hasOwnProperty(system)) {
@@ -68,7 +67,7 @@ function getParam(parameter) {
     if (_.isArray(parameter) && !_.isEmpty(parameter)) {
         return parameter[0];
     } else {
-        return parameter || '';
+        return parameter || undefined;
     };
 }
 
