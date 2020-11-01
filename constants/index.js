@@ -1,4 +1,9 @@
 let name = {
+    backToFace: {
+        en:"back-to-face",
+        fr:"hauteur",
+        nl:"hoogte"
+    },
     boreDiaFittings: {
         en:"bore diameter of fittings",
         fr:"diamètre d'alésage des raccords",
@@ -14,10 +19,20 @@ let name = {
         fr:"centre vers le bas de la douille",
         nl:"midden tot onderkant van het stopcontact"
     },
+    centerToCenter: {
+        en:"center-to-center",
+        fr:"entraxe",
+        nl:"centrum-op-centrum"
+    },
     centerToEnd: {
         en:"center-to-end",
         fr:"centre-à-extrémité",
         nl:"midden-tot-eind"
+    },
+    centerToMiddle: {
+        en:"center-to-middle",
+        fr:"centre à milieu",
+        nl:"centrum-naar-midden"
     },
     outsideDiameter: {
         en:"outside diameter at bevel",
@@ -67,12 +82,12 @@ let name = {
     elb90sr: {
         en:"90° short radius elbow",
         fr:"coude court rayon à 90°",
-        nl:"Elleboog met korte radius van 90 °"
+        nl:"Elleboog met korte radius van 90°"
     },
     elb90lr: {
         en:"90° long radius elbow",
         fr:"coude long rayon à 90°",
-        nl:"Elleboog met lange radius van 90 °"
+        nl:"Elleboog met lange radius van 90°"
     },
     elb45sw: {
         en:"socket weld 45° elbow",
@@ -83,6 +98,16 @@ let name = {
         en:"socket weld 90° elbow",
         fr:"coude à emboîtement à souder 90°",
         nl:"socket weld 90° bocht"
+    },
+    retsr: {
+        en:"180° short radius return",
+        fr:"coude court rayon à 180°",
+        nl:"Elleboog met korte radius van 180°"
+    },
+    retlr: {
+        en:"180° long radius return",
+        fr:"coude court rayon à 180°",
+        nl:"Elleboog met lange radius van 180°"
     },
     min: {
         en:"min",

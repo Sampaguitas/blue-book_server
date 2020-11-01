@@ -14,7 +14,7 @@ async function dimensionsElbowBw90LrSch(agent) {
         
         let sizeOne = getParam(context.parameters.sizeOne);
         let scheduleOne = getParam(context.parameters.scheduleOne);
-        let unit = getParam(context.parameters.unit) || 'metric';
+        let unit = getParam(context.parameters.unit) != 'imperial' ? 'metric' : 'imperial';
 
         if (!sizeOne || !scheduleOne) {
             return dontKnowResponce(agent);

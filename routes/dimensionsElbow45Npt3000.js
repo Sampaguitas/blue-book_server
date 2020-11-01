@@ -13,7 +13,7 @@ async function dimensionsElbow45Npt3000(agent) {
     } else {
         
         let sizeOne = getParam(context.parameters.sizeOne);
-        let unit = getParam(context.parameters.unit) || 'metric';
+        let unit = getParam(context.parameters.unit) != 'imperial' ? 'metric' : 'imperial';
 
         if (!sizeOne) {
             return dontKnowResponce(agent);
