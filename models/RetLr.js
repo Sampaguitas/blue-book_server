@@ -46,7 +46,7 @@ const RetLrSchema = new Schema({
                 uom: {type: String},
             }
         },
-        centerTocenter: {
+        centerToCenter: {
             symbol: {type: String},
             imperial: {
                 value: {
