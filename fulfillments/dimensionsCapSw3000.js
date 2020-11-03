@@ -5,7 +5,7 @@ const { dimensionsResponce, dontKnowResponce, getLocale, getParam, translate } =
 
 async function dimensionsCapSw3000(agent) {
 
-    let context = agent.contexts.find(context => context.name === "dimensions_elbow-followup");
+    let context = agent.contexts.find(context => context.name === "dimensions_cap-followup");
     let locale = getLocale(agent.locale);
     
     if (_.isUndefined(context)) {
