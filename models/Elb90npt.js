@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const Elb90nptSchema = new Schema({
     sizeOne: [{type: String}],
+    class: {type: Number },
     dimensions: {
         centerToEnd: {
             symbol: {type: String},

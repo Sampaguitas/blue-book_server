@@ -11,7 +11,7 @@ let name = {
     },
     bodyWall: {
         en:"body wall thickness",
-        fr:"épaisseur de la paroi du corps",
+        fr:"épaisseur du corps",
         nl:"dikte van de lichaamswand"
     },
     centerToBottomSocket: {
@@ -34,7 +34,27 @@ let name = {
         fr:"centre à milieu",
         nl:"centrum-naar-midden"
     },
+    endToEnd: {
+        en:"end-to-end",
+        fr:"bout en bout",
+        nl:"eind tot eind"
+    },
+    endWallThickness: {
+        en:"end wall thickness",
+        fr:"épaisseur d'extrémité",
+        nl:"eindwanddikte"
+    },
+    length: {
+        en:"length",
+        fr:"hauteur",
+        nl:"lengte"
+    },
     outsideDiameter: {
+        en:"outside diameter at bevel",
+        fr:"diamètre extérieur au chanfrein",
+        nl:"buitendiameter bij afschuining"
+    },
+    outsideDiameterBevel: {
         en:"outside diameter at bevel",
         fr:"diamètre extérieur au chanfrein",
         nl:"buitendiameter bij afschuining"
@@ -56,7 +76,7 @@ let name = {
     },
     socketWallThickness: {
         en:"socket wall thickness",
-        fr:"épaisseur de la paroi de la douille",
+        fr:"épaisseur de la douille",
         nl:"wanddikte stopcontact"
     },
     tolerance: {
@@ -74,10 +94,20 @@ let name = {
         fr:"masse",
         nl:"gewicht"
     },
-    elb45lr: {
-        en:"45° long radius elbow",
-        fr:"coude long rayon à 45°",
-        nl:"Elleboog met lange radius van 45°"
+    capbw: {
+        en:"cap",
+        fr:"bouchon femelle",
+        nl:"cap"
+    },
+    capnpt: {
+        en:"threaded cap",
+        fr:"bouchon femelle fileté",
+        nl:"cap met schroefdraad"
+    },
+    capsw: {
+        en:"socket weld cap",
+        fr:"bouchon femelle à emboîtement à souder",
+        nl:"cap"
     },
     elb90sr: {
         en:"90° short radius elbow",
@@ -89,15 +119,30 @@ let name = {
         fr:"coude long rayon à 90°",
         nl:"Elleboog met lange radius van 90°"
     },
-    elb45sw: {
-        en:"socket weld 45° elbow",
-        fr:"coude à emboîtement à souder 45°",
-        nl:"socket weld 45° bocht"
-    },
     elb90sw: {
         en:"socket weld 90° elbow",
         fr:"coude à emboîtement à souder 90°",
         nl:"socket weld 90° bocht"
+    },
+    elb90npt: {
+        en:"threaded 90° elbow",
+        fr:"coude à 90° fileté",
+        nl:"90° bocht met schroefdraad"
+    },
+    elb45lr: {
+        en:"45° long radius elbow",
+        fr:"coude long rayon à 45°",
+        nl:"Elleboog met lange radius van 45°"
+    },
+    elb45npt: {
+        en:"threaded 45° elbow",
+        fr:"coude à 45° fileté",
+        nl:"45° bocht met schroefdraad"
+    },
+    elb45sw: {
+        en:"socket weld 45° elbow",
+        fr:"coude à emboîtement à souder 45°",
+        nl:"socket weld 45° bocht"
     },
     retsr: {
         en:"180° short radius return",

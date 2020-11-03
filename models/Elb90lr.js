@@ -5,7 +5,7 @@ const Elb90lrSchema = new Schema({
     sizeOne: [{type: String}],
     scheduleOne: [{type: String}],
     dimensions: {
-        outsideDiameter: {
+        outsideDiameterBevel: {
             symbol: {type: String},
             imperial: {
                 value: {

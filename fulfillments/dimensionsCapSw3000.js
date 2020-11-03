@@ -1,9 +1,9 @@
 const _ = require('lodash');
-const Elb45npt = require('../models/Elb45npt');
+const CapSw = require('../models/CapSw');
 
 const { dimensionsResponce, dontKnowResponce, getLocale, getParam, translate } = require('../functions');
 
-async function dimensionsElbow45Npt2000(agent) {
+async function dimensionsCapSw3000(agent) {
 
     let context = agent.contexts.find(context => context.name === "dimensions_elbow-followup");
     let locale = getLocale(agent.locale);
@@ -18,15 +18,16 @@ async function dimensionsElbow45Npt2000(agent) {
         if (!sizeOne) {
             return dontKnowResponce(agent);
         } else {
-            await Elb45npt.findOne({sizeOne, class: 2000}, function (err, res) {
+            await CapSw.findOne({sizeOne, class: 3000}, function (err, res) {
                 if (!!err || !res) {
                     return dontKnowResponce(agent);
                 } else {
-                    return dimensionsResponce(agent, unit, res.dimensions, `${sizeOne} ${translate('elb45npt', locale)} class 2000`, 'elb45npt.png')
+                    return dimensionsResponce(agent, unit, res.dimensions, `${sizeOne} ${translate('capsw', locale)} class 3000`, 'capsw.png')
                 }
             });
         }
     }
 }
 
-module.exports = dimensionsElbow45Npt2000;
+module.exports = dimensionsCapSw3000;
+

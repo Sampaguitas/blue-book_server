@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const RetLrSchema = new Schema({
     sizeOne: [{type: String}],
     dimensions: {
-        outsideDiameter: {
+        outsideDiameterBevel: {
             symbol: {type: String},
             imperial: {
                 value: {

@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const Elb45swSchema = new Schema({
     sizeOne: [{type: String}],
+    class: {type: Number },
     dimensions: {
         socketBoreDia: {
             symbol: {type: String},

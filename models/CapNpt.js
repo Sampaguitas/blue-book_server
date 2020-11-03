@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Elb90srSchema = new Schema({
+const CapNptSchema = new Schema({
     sizeOne: [{type: String}],
-    scheduleOne: [{type: String}],
+    class: {type: Number },
     dimensions: {
-        outsideDiameterBevel: {
+        outsideDiameter: {
             symbol: {type: String},
             imperial: {
                 value: {
@@ -26,7 +26,7 @@ const Elb90srSchema = new Schema({
                 uom: {type: String},
             }
         },
-        wallThickness: {
+        endToEnd: {
             symbol: {type: String},
             imperial: {
                 value: {
@@ -47,7 +47,7 @@ const Elb90srSchema = new Schema({
                 uom: {type: String},
             }
         },
-        centerToEnd: {
+        endWallThickness: {
             symbol: {type: String},
             imperial: {
                 value: {
@@ -92,4 +92,4 @@ const Elb90srSchema = new Schema({
     }
 });
 
-module.exports = Elb90sr = mongoose.model('elb90srs', Elb90srSchema);
+module.exports = CapNpt = mongoose.model('capnpts', CapNptSchema);

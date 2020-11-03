@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Elb90srSchema = new Schema({
+const CapBwSchema = new Schema({
     sizeOne: [{type: String}],
     scheduleOne: [{type: String}],
     dimensions: {
@@ -47,7 +47,7 @@ const Elb90srSchema = new Schema({
                 uom: {type: String},
             }
         },
-        centerToEnd: {
+        length: {
             symbol: {type: String},
             imperial: {
                 value: {
@@ -92,4 +92,4 @@ const Elb90srSchema = new Schema({
     }
 });
 
-module.exports = Elb90sr = mongoose.model('elb90srs', Elb90srSchema);
+module.exports = CapBw = mongoose.model('capbws', CapBwSchema);
