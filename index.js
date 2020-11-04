@@ -19,7 +19,6 @@ mongoose
 app.post("/dialogflow", express.json(), (req, res) => {
     const agent = new WebhookClient({ request: req, response: res });
     let intentMap = new Map();
-    
     //dimensions_cap
     intentMap.set('dimensions_cap - F - NPT - 3000', require('./fulfillments/dimensionsCapNpt3000'));
     intentMap.set('dimensions_cap - F - NPT - 6000', require('./fulfillments/dimensionsCapNpt6000'));
