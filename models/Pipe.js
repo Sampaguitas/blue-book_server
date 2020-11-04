@@ -5,7 +5,7 @@ const PipeSchema = new Schema({
     sizeOne: [{type: String}],
     scheduleOne: [{type: String}],
     dimensions: {
-        outsideDiameterBevel: {
+        outsideDiameter: {
             symbol: {type: String},
             imperial: {
                 value: {

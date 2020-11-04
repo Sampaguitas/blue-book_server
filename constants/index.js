@@ -60,9 +60,9 @@ let name = {
         "nl":"lengte"
     },
     "outsideDiameter": {
-        "en":"outside diameter at bevel",
-        "fr":"diamètre extérieur au chanfrein",
-        "nl":"buitendiameter bij afschuining"
+        "en":"outside diameter",
+        "fr":"diamètre extérieur",
+        "nl":"buitendiameter"
     },
     "outsideDiameterBevel": {
         "en":"outside diameter at bevel",
