@@ -20,6 +20,7 @@ function dimensionsResponce(agent, system, dimensions, title, image) {
             return acc;
         }, []);
         return (
+            agent.add(`${translate('hereAreDimensions', locale)}`),
             agent.add(new Card({
                 title: title,
                 imageUrl: `https://bluebook-bucket.s3.eu-west-3.amazonaws.com/${image}`,

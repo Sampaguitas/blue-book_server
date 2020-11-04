@@ -224,6 +224,11 @@ let name = {
         "fr":"sont",
         "nl":"zijn"
     },
+    "hereAreDimensions": {
+        "en":"here are the dimensions:",
+        "fr":"voici les dimensions:",
+        "nl":"hier zijn de afmetingen:"
+    },
     "whatNext": {
         "en":[
             "What else can I help with?",
