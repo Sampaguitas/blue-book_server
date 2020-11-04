@@ -1,11 +1,11 @@
 const _ = require('lodash');
-const CapBw = require('../models/CapBw');
+const CrossBw = require('../models/CrossBw');
 
 const { dimensionsResponce, dontKnowResponce, getLocale, getParam, translate } = require('../functions');
 
-async function dimensionsCapBwSch(agent) {
+async function dimensionsCrossBwSch(agent) {
 
-    let context = agent.contexts.find(context => context.name === "dimensions_cap-followup");
+    let context = agent.contexts.find(context => context.name === "dimensions_cross-followup");
     let locale = getLocale(agent.locale);
     
     if (_.isUndefined(context)) {
@@ -19,16 +19,16 @@ async function dimensionsCapBwSch(agent) {
         if (!sizeOne || !scheduleOne) {
             return dontKnowResponce(agent);
         } else {
-            await CapBw.findOne({sizeOne, scheduleOne}, function (err, res) {
+            await CrossBw.findOne({sizeOne, scheduleOne}, function (err, res) {
                 if (!!err || !res) {
                     return dontKnowResponce(agent);
                 } else {
-                    return dimensionsResponce(agent, unit, res.dimensions, `${sizeOne} ${scheduleOne} ${translate('capbw', locale)}`, 'capbw.png')
+                    return dimensionsResponce(agent, unit, res.dimensions, `${sizeOne} ${scheduleOne} ${translate('crossbw', locale)}`, 'crossbw.png')
                 }
             });
         }
     }
 }
 
-module.exports = dimensionsCapBwSch;
+module.exports = dimensionsCrossBwSch;
 

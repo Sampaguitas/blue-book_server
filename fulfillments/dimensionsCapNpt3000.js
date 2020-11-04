@@ -7,14 +7,14 @@ async function dimensionsCapNpt3000(agent) {
 
     let context = agent.contexts.find(context => context.name === "dimensions_cap-followup");
     let locale = getLocale(agent.locale);
-    
+
     if (_.isUndefined(context)) {
         return dontKnowResponce(agent);
     } else {
         
         let sizeOne = getParam(context.parameters.sizeOne);
         let unit = getParam(context.parameters.unit) != 'imperial' ? 'metric' : 'imperial';
-
+        
         if (!sizeOne) {
             return dontKnowResponce(agent);
         } else {

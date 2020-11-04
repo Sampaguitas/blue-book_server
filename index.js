@@ -28,13 +28,13 @@ app.post("/dialogflow", express.json(), (req, res) => {
     intentMap.set('dimensions_cap - F - SW - 9000', require('./fulfillments/dimensionsCapSw9000'));
     intentMap.set('dimensions_cap - BW - Sch', require('./fulfillments/dimensionsCapBwSch'));
     //dimensions_cross
-    // intentMap.set('dimensions_cross - F - NPT - 2000', require('./fulfillments/dimensionsCrossNpt2000'));
-    // intentMap.set('dimensions_cross - F - NPT - 3000', require('./fulfillments/dimensionsCrossNpt3000'));
-    // intentMap.set('dimensions_cross - F - NPT - 6000', require('./fulfillments/dimensionsCrossNpt6000'));
-    // intentMap.set('dimensions_cross - F - SW - 3000', require('./fulfillments/dimensionsCrossSw3000'));
-    // intentMap.set('dimensions_cross - F - SW - 6000', require('./fulfillments/dimensionsCrossSw6000'));
-    // intentMap.set('dimensions_cross - F - SW - 9000', require('./fulfillments/dimensionsCrossSw9000'));
-    // intentMap.set('dimensions_cross - BW - Sch', require('./fulfillments/dimensionsCrossBwSch'));
+    intentMap.set('dimensions_cross - F - NPT - 2000', require('./fulfillments/dimensionsCrossNpt2000'));
+    intentMap.set('dimensions_cross - F - NPT - 3000', require('./fulfillments/dimensionsCrossNpt3000'));
+    intentMap.set('dimensions_cross - F - NPT - 6000', require('./fulfillments/dimensionsCrossNpt6000'));
+    intentMap.set('dimensions_cross - F - SW - 3000', require('./fulfillments/dimensionsCrossSw3000'));
+    intentMap.set('dimensions_cross - F - SW - 6000', require('./fulfillments/dimensionsCrossSw6000'));
+    intentMap.set('dimensions_cross - F - SW - 9000', require('./fulfillments/dimensionsCrossSw9000'));
+    intentMap.set('dimensions_cross - BW - Sch', require('./fulfillments/dimensionsCrossBwSch'));
     //dimensions_elbow
     intentMap.set('dimensions_elbow - F - 45 - NPT - 2000', require('./fulfillments/dimensionsElbow45Npt2000'));
     intentMap.set('dimensions_elbow - F - 45 - NPT - 3000', require('./fulfillments/dimensionsElbow45Npt3000'));
@@ -55,13 +55,13 @@ app.post("/dialogflow", express.json(), (req, res) => {
     intentMap.set('dimensions_return - LR - Sch', require('./fulfillments/dimensionsReturnLrSch'));
     intentMap.set('dimensions_return - SR - Sch', require('./fulfillments/dimensionsReturnSrSch'));
     //dimensions_tee
-    // intentMap.set('dimensions_tee - F - NPT - 2000', require('./fulfillments/dimensionsTeeNpt2000'));
-    // intentMap.set('dimensions_tee - F - NPT - 3000', require('./fulfillments/dimensionsTeeNpt3000'));
-    // intentMap.set('dimensions_tee - F - NPT - 6000', require('./fulfillments/dimensionsTeeNpt6000'));
-    // intentMap.set('dimensions_tee - F - SW - 3000', require('./fulfillments/dimensionsTeeSw3000'));
-    // intentMap.set('dimensions_tee - F - SW - 6000', require('./fulfillments/dimensionsTeeSw6000'));
-    // intentMap.set('dimensions_tee - F - SW - 9000', require('./fulfillments/dimensionsTeeSw9000'));
-    // intentMap.set('dimensions_tee - BW - Sch', require('./fulfillments/dimensionsTeeBwSch'));
+    intentMap.set('dimensions_tee - F - NPT - 2000', require('./fulfillments/dimensionsTeeNpt2000'));
+    intentMap.set('dimensions_tee - F - NPT - 3000', require('./fulfillments/dimensionsTeeNpt3000'));
+    intentMap.set('dimensions_tee - F - NPT - 6000', require('./fulfillments/dimensionsTeeNpt6000'));
+    intentMap.set('dimensions_tee - F - SW - 3000', require('./fulfillments/dimensionsTeeSw3000'));
+    intentMap.set('dimensions_tee - F - SW - 6000', require('./fulfillments/dimensionsTeeSw6000'));
+    intentMap.set('dimensions_tee - F - SW - 9000', require('./fulfillments/dimensionsTeeSw9000'));
+    intentMap.set('dimensions_tee - BW - Sch', require('./fulfillments/dimensionsTeeBwSch'));
     agent.handleRequest(intentMap);
 });
 

@@ -1,34 +1,32 @@
 const _ = require('lodash');
-const CapBw = require('../models/CapBw');
+const TeeNpt = require('../models/TeeNpt');
 
 const { dimensionsResponce, dontKnowResponce, getLocale, getParam, translate } = require('../functions');
 
-async function dimensionsCapBwSch(agent) {
+async function dimensionsTeeNpt3000(agent) {
 
-    let context = agent.contexts.find(context => context.name === "dimensions_cap-followup");
+    let context = agent.contexts.find(context => context.name === "dimensions_tee-followup");
     let locale = getLocale(agent.locale);
-    
+
     if (_.isUndefined(context)) {
         return dontKnowResponce(agent);
     } else {
         
         let sizeOne = getParam(context.parameters.sizeOne);
-        let scheduleOne = getParam(context.parameters.scheduleOne);
         let unit = getParam(context.parameters.unit) != 'imperial' ? 'metric' : 'imperial';
-
-        if (!sizeOne || !scheduleOne) {
+        
+        if (!sizeOne) {
             return dontKnowResponce(agent);
         } else {
-            await CapBw.findOne({sizeOne, scheduleOne}, function (err, res) {
+            await TeeNpt.findOne({sizeOne, class: 3000}, function (err, res) {
                 if (!!err || !res) {
                     return dontKnowResponce(agent);
                 } else {
-                    return dimensionsResponce(agent, unit, res.dimensions, `${sizeOne} ${scheduleOne} ${translate('capbw', locale)}`, 'capbw.png')
+                    return dimensionsResponce(agent, unit, res.dimensions, `${sizeOne} ${translate('teenpt', locale)} class 3000`, 'teenpt.png')
                 }
             });
         }
     }
 }
 
-module.exports = dimensionsCapBwSch;
-
+module.exports = dimensionsTeeNpt3000;

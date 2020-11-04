@@ -16,18 +16,28 @@ let name = {
     },
     centerToBottomSocket: {
         en:"center to bottom of socket",
-        fr:"centre vers le bas de la douille",
+        fr:"centre au fond de l’emboîtement",
         nl:"midden tot onderkant van het stopcontact"
     },
     centerToCenter: {
         en:"center-to-center",
-        fr:"entraxe",
+        fr:"encombrement",
         nl:"centrum-op-centrum"
     },
     centerToEnd: {
         en:"center-to-end",
-        fr:"centre-à-extrémité",
-        nl:"midden-tot-eind"
+        fr:"encombrement",
+        nl:"centrum-tot-eind"
+    },
+    centerToEndRun: {
+        en:"center-to-end run",
+        fr:"encombrement collecteur",
+        nl:"centrum-tot-eind run"
+    },
+    centerToEndOutlet: {
+        en:"center-to-end outlet",
+        fr:"encombrement sortie",
+        nl:"centrum-tot-eind uitgang"
     },
     centerToMiddle: {
         en:"center-to-middle",

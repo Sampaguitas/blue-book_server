@@ -1,34 +1,32 @@
 const _ = require('lodash');
-const CapBw = require('../models/CapBw');
+const CrossNpt = require('../models/CrossNpt');
 
 const { dimensionsResponce, dontKnowResponce, getLocale, getParam, translate } = require('../functions');
 
-async function dimensionsCapBwSch(agent) {
+async function dimensionsCrossNpt3000(agent) {
 
-    let context = agent.contexts.find(context => context.name === "dimensions_cap-followup");
+    let context = agent.contexts.find(context => context.name === "dimensions_cross-followup");
     let locale = getLocale(agent.locale);
-    
+
     if (_.isUndefined(context)) {
         return dontKnowResponce(agent);
     } else {
         
         let sizeOne = getParam(context.parameters.sizeOne);
-        let scheduleOne = getParam(context.parameters.scheduleOne);
         let unit = getParam(context.parameters.unit) != 'imperial' ? 'metric' : 'imperial';
-
-        if (!sizeOne || !scheduleOne) {
+        
+        if (!sizeOne) {
             return dontKnowResponce(agent);
         } else {
-            await CapBw.findOne({sizeOne, scheduleOne}, function (err, res) {
+            await CrossNpt.findOne({sizeOne, class: 3000}, function (err, res) {
                 if (!!err || !res) {
                     return dontKnowResponce(agent);
                 } else {
-                    return dimensionsResponce(agent, unit, res.dimensions, `${sizeOne} ${scheduleOne} ${translate('capbw', locale)}`, 'capbw.png')
+                    return dimensionsResponce(agent, unit, res.dimensions, `${sizeOne} ${translate('crossnpt', locale)} class 3000`, 'crossnpt.png')
                 }
             });
         }
     }
 }
 
-module.exports = dimensionsCapBwSch;
-
+module.exports = dimensionsCrossNpt3000;
