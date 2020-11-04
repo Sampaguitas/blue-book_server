@@ -2,47 +2,47 @@ let name = {
     "backToFace": {
         "en":"back-to-face",
         "fr":"hauteur",
-        "nl":"hoogte"
+        "nl":"hoogte" 
     },
     "boreDiaFittings": {
         "en":"bore diameter of fittings",
         "fr":"diamètre d'alésage des raccords",
-        "nl":"droeg diameter van hulpstukken"
+        "nl":"diameter van fittingen"
     },
     "bodyWall": {
         "en":"body wall thickness",
         "fr":"épaisseur du corps",
-        "nl":"dikte van de lichaamswand"
+        "nl":"wanddikte"
     },
     "centerToBottomSocket": {
         "en":"center to bottom of socket",
         "fr":"centre au fond de l’emboîtement",
-        "nl":"midden tot onderkant van het stopcontact"
+        "nl":"midden tot onderkant van de sok"
     },
     "centerToCenter": {
         "en":"center-to-center",
         "fr":"encombrement",
-        "nl":"centrum-op-centrum"
+        "nl":"as-tot-as"
     },
     "centerToEnd": {
         "en":"center-to-end",
         "fr":"encombrement",
-        "nl":"centrum-tot-eind"
+        "nl":"as-tot-eind"
     },
     "centerToEndRun": {
         "en":"center-to-end run",
         "fr":"encombrement collecteur",
-        "nl":"centrum-tot-eind run"
+        "nl":"as-tot-eind run"
     },
     "centerToEndOutlet": {
         "en":"center-to-end outlet",
         "fr":"encombrement sortie",
-        "nl":"centrum-tot-eind uitgang"
+        "nl":"as-tot-eind uitloop"
     },
     "centerToMiddle": {
         "en":"center-to-middle",
         "fr":"centre à milieu",
-        "nl":"centrum-naar-midden"
+        "nl":"as-tot-midden"
     },
     "endToEnd": {
         "en":"end-to-end",
@@ -77,17 +77,17 @@ let name = {
     "socketBoreDia": {
         "en":"socket bore diameter",
         "fr":"diamètre d'alésage de la douille",
-        "nl":"mof droeg diameter"
+        "nl":"mof diameter"
     },
     "socketDepth": {
         "en":"depth of socket",
         "fr":"profondeur de douille",
-        "nl":"diepte van de koker"
+        "nl":"diepte van de sok"
     },
     "socketWallThickness": {
         "en":"socket wall thickness",
         "fr":"épaisseur de la douille",
-        "nl":"wanddikte stopcontact"
+        "nl":"wanddikte sok"
     },
     "tolerance": {
         "en":"tolerance",
@@ -116,7 +116,7 @@ let name = {
     },
     "capsw": {
         "en":"socket weld cap",
-        "fr":"bouchon femelle à emboîtement à souder",
+        "fr":"bouchon femelle emboîté soudé",
         "nl":"socket weld cap"
     },
     "crossbw": {
@@ -131,53 +131,58 @@ let name = {
     },
     "crosssw": {
         "en":"socket weld cross",
-        "fr":"croix à emboîtement à souder",
+        "fr":"croix emboîté soudé",
         "nl":"socket weld kruis"
     },
     "elb90sr": {
         "en":"90° short radius elbow",
         "fr":"coude court rayon à 90°",
-        "nl":"Elleboog met korte radius van 90°"
+        "nl":"elleboog met korte radius van 90°"
     },
     "elb90lr": {
         "en":"90° long radius elbow",
         "fr":"coude long rayon à 90°",
-        "nl":"Elleboog met lange radius van 90°"
+        "nl":"elleboog met lange radius van 90°"
     },
     "elb90sw": {
         "en":"socket weld 90° elbow",
-        "fr":"coude à emboîtement à souder 90°",
+        "fr":"coude emboîté soudé à 90°",
         "nl":"socket weld 90° bocht"
     },
     "elb90npt": {
         "en":"threaded 90° elbow",
-        "fr":"coude à 90° fileté",
+        "fr":"coude fileté à 90°",
         "nl":"90° bocht met schroefdraad"
     },
     "elb45lr": {
         "en":"45° long radius elbow",
         "fr":"coude long rayon à 45°",
-        "nl":"Elleboog met lange radius van 45°"
+        "nl":"elleboog met lange radius van 45°"
     },
     "elb45npt": {
         "en":"threaded 45° elbow",
-        "fr":"coude à 45° fileté",
+        "fr":"coude fileté à 45°",
         "nl":"45° bocht met schroefdraad"
     },
     "elb45sw": {
         "en":"socket weld 45° elbow",
-        "fr":"coude à emboîtement à souder 45°",
+        "fr":"coude emboîté soudé à 45°",
         "nl":"socket weld 45° bocht"
+    },
+    "pipe": {
+        "en":"pipe",
+        "fr":"tube",
+        "nl":"pijp"
     },
     "retsr": {
         "en":"180° short radius return",
         "fr":"coude court rayon à 180°",
-        "nl":"Elleboog met korte radius van 180°"
+        "nl":"elleboog met korte radius van 180°"
     },
     "retlr": {
         "en":"180° long radius return",
         "fr":"coude court rayon à 180°",
-        "nl":"Elleboog met lange radius van 180°"
+        "nl":"elleboog met lange radius van 180°"
     },
     "teebw": {
         "en":"butt weld tee",
@@ -191,7 +196,7 @@ let name = {
     },
     "teesw": {
         "en":"socket weld tee",
-        "fr":"té à emboîtement à souder",
+        "fr":"té emboîté soudé",
         "nl":"socket weld t-stuk"
     },
     "min": {
