@@ -25,8 +25,8 @@ function dimensionsResponce(agent, system, dimensions, title, image) {
                 title: title,
                 imageUrl: `https://bluebook-bucket.s3.eu-west-3.amazonaws.com/${image}`,
                 text: `${params.join('  \n')}`,
-            })),
-            agent.add(`${translate('whatNext', locale)}`)
+            }))
+            // agent.add(`${translate('whatNext', locale)}`)
         );
     } else {
         let params = Object.keys(dimensions).reduce(function(acc, cur) {
@@ -45,8 +45,8 @@ function dimensionsResponce(agent, system, dimensions, title, image) {
         }, []);
         return (
             agent.add(`${translate('dimOf', locale)} ${title} ${translate('are', locale)}:`),
-            agent.add(params.join(', ')),
-            agent.add(`${translate('whatNext', locale)}`)
+            agent.add(params.join(', '))
+            // agent.add(`${translate('whatNext', locale)}`)
         );
     }
 }
