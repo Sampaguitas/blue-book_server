@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const Elb90npt = require('../models/Elb90npt');
+const Elb90Npt = require('../models/Elb90Npt');
 
 const { dimensionsResponce, dontKnowResponce, getLocale, getParam, translate } = require('../functions');
 
@@ -18,7 +18,7 @@ async function dimensionsElbow90Npt2000(agent) {
         if (!sizeOne) {
             return dontKnowResponce(agent);
         } else {
-            await Elb90npt.findOne({sizeOne, class: 2000}, function (err, res) {
+            await Elb90Npt.findOne({sizeOne, class: 2000}, function (err, res) {
                 if (!!err || !res) {
                     return dontKnowResponce(agent);
                 } else {

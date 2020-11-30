@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Elb90swSchema = new Schema({
+const Elb90SwSchema = new Schema({
     sizeOne: [{type: String}],
     class: {type: Number },
     dimensions: {
@@ -176,4 +176,4 @@ const Elb90swSchema = new Schema({
     }
 });
 
-module.exports = Elb90sw = mongoose.model('elb90sws', Elb90swSchema);
+module.exports = Elb90Sw = mongoose.model('elb90sws', Elb90SwSchema);

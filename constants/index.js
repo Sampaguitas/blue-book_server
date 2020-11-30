@@ -134,6 +134,16 @@ let name = {
         "fr":"croix emboîté soudé",
         "nl":"socket weld kruis"
     },
+    "retsr": {
+        "en":"180° short radius return",
+        "fr":"coude court rayon à 180°",
+        "nl":"elleboog met korte radius van 180°"
+    },
+    "retlr": {
+        "en":"180° long radius return",
+        "fr":"coude long rayon à 180°",
+        "nl":"elleboog met lange radius van 180°"
+    },
     "elb90sr": {
         "en":"90° short radius elbow",
         "fr":"coude court rayon à 90°",

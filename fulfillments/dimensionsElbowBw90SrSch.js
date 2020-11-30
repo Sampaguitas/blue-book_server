@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const Elb90sr = require('../models/Elb90sr');
+const Elb90Sr = require('../models/Elb90Sr');
 
 const { dimensionsResponce, dontKnowResponce, getLocale, getParam, translate } = require('../functions');
 
@@ -19,7 +19,7 @@ async function dimensionsElbowBw90SrSch(agent) {
         if (!sizeOne || !scheduleOne) {
             return dontKnowResponce(agent);
         } else {
-            await Elb90sr.findOne({sizeOne, scheduleOne}, function (err, res) {
+            await Elb90Sr.findOne({sizeOne, scheduleOne}, function (err, res) {
                 if (!!err || !res) {
                     return dontKnowResponce(agent);
                 } else {

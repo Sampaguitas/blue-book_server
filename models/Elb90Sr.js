@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Elb90srSchema = new Schema({
+const Elb90SrSchema = new Schema({
     sizeOne: [{type: String}],
     scheduleOne: [{type: String}],
     dimensions: {
@@ -92,4 +92,4 @@ const Elb90srSchema = new Schema({
     }
 });
 
-module.exports = Elb90sr = mongoose.model('elb90srs', Elb90srSchema);
+module.exports = Elb90Sr = mongoose.model('elb90srs', Elb90SrSchema);

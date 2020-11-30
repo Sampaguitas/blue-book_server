@@ -1,53 +1,32 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Elb90lrSchema = new Schema({
+const Elb45NptSchema = new Schema({
     sizeOne: [{type: String}],
-    scheduleOne: [{type: String}],
+    class: {type: Number },
     dimensions: {
-        outsideDiameterBevel: {
-            symbol: {type: String},
-            imperial: {
-                value: {
-                    solid: {type: Number},
-                    avg: {type: Number},
-                    min: {type: Number},
-                    max: {type: Number}
-                },
-                uom: {type: String},
-            },
-            metric: {
-                value: {
-                    solid: {type: Number},
-                    avg: {type: Number},
-                    min: {type: Number},
-                    max: {type: Number}
-                },
-                uom: {type: String},
-            }
-        },
-        wallThickness: {
-            symbol: {type: String},
-            imperial: {
-                value: {
-                    solid: {type: Number},
-                    avg: {type: Number},
-                    min: {type: Number},
-                    max: {type: Number}
-                },
-                uom: {type: String},
-            },
-            metric: {
-                value: {
-                    solid: {type: Number},
-                    avg: {type: Number},
-                    min: {type: Number},
-                    max: {type: Number}
-                },
-                uom: {type: String},
-            }
-        },
         centerToEnd: {
+            symbol: {type: String},
+            imperial: {
+                value: {
+                    solid: {type: Number},
+                    avg: {type: Number},
+                    min: {type: Number},
+                    max: {type: Number}
+                },
+                uom: {type: String},
+            },
+            metric: {
+                value: {
+                    solid: {type: Number},
+                    avg: {type: Number},
+                    min: {type: Number},
+                    max: {type: Number}
+                },
+                uom: {type: String},
+            }
+        },
+        outsideDiameterBand: {
             symbol: {type: String},
             imperial: {
                 value: {
@@ -92,4 +71,4 @@ const Elb90lrSchema = new Schema({
     }
 });
 
-module.exports = Elb90lr = mongoose.model('elb90lrs', Elb90lrSchema);
+module.exports = Elb45Npt = mongoose.model('elb45npts', Elb45NptSchema);

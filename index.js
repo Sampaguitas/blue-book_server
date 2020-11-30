@@ -50,6 +50,8 @@ app.post("/dialogflow", express.json(), (req, res) => {
     intentMap.set('dimensions_elbow - BW - 45 - Sch', require('./fulfillments/dimensionsElbowBw45Sch'));
     intentMap.set('dimensions_elbow - BW - 90 - LR - Sch', require('./fulfillments/dimensionsElbowBw90LrSch'));
     intentMap.set('dimensions_elbow - BW - 90 - SR - Sch', require('./fulfillments/dimensionsElbowBw90SrSch'));
+    intentMap.set('dimensions_elbow - BW - 180 - LR - Sch', require('./fulfillments/dimensionsElbowBw180LrSch'));
+    intentMap.set('dimensions_elbow - BW - 180 - SR - Sch', require('./fulfillments/dimensionsElbowBw180SrSch'));
     //dimensions_pipe
     intentMap.set('dimensions_pipe', require('./fulfillments/dimensionsPipe'));
     //dimensions_return
